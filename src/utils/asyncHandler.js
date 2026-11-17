@@ -1,6 +1,6 @@
 const asyncHandler = (requestHandler) => {
   // Return Express middleware function
-  (req, res, next) => {
+  return (req, res, next) => {
     // Convert the request handler result into a Promise
     Promise.resolve(requestHandler(req, res, next))
 
